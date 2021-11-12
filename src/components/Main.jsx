@@ -27,22 +27,6 @@ function Main(props) {
     getBookmarks();
   };
 
-  const updateBookmarks = async (bookmark, id) => {
-    await fetch(URL + id, {
-      method: "put",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(bookmark),
-    });
-    getBookmarks();
-  };
-  const deleteBookmarks = async (id) => {
-    await fetch(URL + id, {
-      method: "delete",
-    });
-    getBookmarks();
-  };
 
     const updateBookmarks = async (bookmark, id) => {
         await fetch (URL + id, {
@@ -71,7 +55,7 @@ function Main(props) {
             <Route path="/bookmarks/:id" element={<Show bookmarks={bookmarks} updateBookmarks={updateBookmarks} deleteBookmarks={deleteBookmarks}/>}/>
         </Routes>
     </div>
-  );
+  
 }
 
 export default Main;
