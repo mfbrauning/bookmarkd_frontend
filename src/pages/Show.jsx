@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -64,6 +65,7 @@ function Show(props) {
   } else {
     <h1>Nothing found!</h1>;
   }
+
 }
 
 export default Show;
