@@ -5,28 +5,28 @@ function Show(props){
     const navigate = useNavigate()
     const params = useParams()
     const id = params.id
-    const bookmark = props.bookmarks
+    const bookmarks = props.bookmarks
     // Add State
     const[editForm, setEditForm] = useState({})
     // useEffect to avoid show route page refresh error
     useEffect(() => {
         if(props.bookmarks){
             // Grab the id
-            const bookmarks = bookmark.find((b) => b._id === id)
-            setEditForm(bookmarks)
+            const bookmark = bookmarks.find((b) => b._id === id)
+            setEditForm(bookmark)
         }
     }, [props.bookmarks])
 
     if (props.bookmarks){
         //Grab the id 
-        const bookmarks = bookmark.find((b) => b._id === id)
+        const bookmark = bookmarks.find((b) => b._id === id)
 
 
 
 
         // Delete function 
         const removeBookmark = () => {
-            props.deleteBookmarks(bookmarks._id)
+            props.deleteBookmarks(bookmark._id)
             navigate("/")
          }
          return (
