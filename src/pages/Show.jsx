@@ -15,9 +15,9 @@ function Show(props){
             const bookmarks = bookmark.find((b) => b._id === id)
             setEditForm(bookmarks)
         }
-    }, [props.bookmark])
+    }, [props.bookmarks])
 
-    if (props.bookmark){
+    if (props.bookmarks){
         //Grab the id 
         const bookmarks = bookmark.find((b) => b._id === id)
 
@@ -26,7 +26,7 @@ function Show(props){
 
         // Delete function 
         const removeBookmark = () => {
-            props.deleteBookmark(bookmarks._id)
+            props.deleteBookmarks(bookmarks._id)
             navigate("/")
          }
          return (
