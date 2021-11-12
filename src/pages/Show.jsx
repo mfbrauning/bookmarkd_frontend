@@ -62,7 +62,7 @@ function Show(props) {
       </div>
     );
   } else {
-    <h1>okay</h1>;
+    <h1>Nothing found!</h1>;
   }
 }
 
