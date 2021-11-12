@@ -26,6 +26,10 @@ function Show(props) {
       props.updateBookmarks(editForm);
       navigate("/");
     };
+    const removeBookmark = () => {
+      props.deleteBookmarks(bookmark._id);
+      navigate("/");
+    };
     const form = (
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
@@ -47,10 +51,13 @@ function Show(props) {
         <input type="submit" value="Edit Bookmark" />
       </form>
     );
+
     return (
       <div className="bookmark">
         <h1>{bookmark.name}</h1>
-
+        <button id="delete" onClick={removeBookmark}>
+          Delete Bookmark
+        </button>
         {form}
       </div>
     );
