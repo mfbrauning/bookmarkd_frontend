@@ -28,6 +28,23 @@ function Main(props){
         getBookmarks()
     }
 
+    const updateBookmarks = async (bookmark, id) => {
+        await fetch (URL + id, {
+            method: "put",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(bookmark)
+        })
+        getBookmarks()
+    }
+    const deleteBookmarks = async (id) => {
+        await fetch(URL + id, {
+            method: "delete"
+        })
+        getBookmarks()
+    }
+
     useEffect(() => getBookmarks(), [])
 
 
@@ -35,7 +52,7 @@ function Main(props){
     return <div>
         <Routes>
             <Route path="/" element={<Index bookmarks={bookmarks} createBookmarks={createBookmarks}/>}/>
-            <Route path="/bookmarks/:id" element={<Show/>}/>
+            <Route path="/bookmarks/:id" element={<Show bookmarks={bookmarks} updateBookmarks={updateBookmarks} deleteBookmarks={deleteBookmarks}/>}/>
         </Routes>
     </div>
 }
