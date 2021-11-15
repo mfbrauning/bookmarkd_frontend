@@ -2,7 +2,7 @@
 
 Bookmark'd is an application that lets users bookmark a website by saving the name and url of the website to a mongoDB database.
 
-### user stroies
+### user stories
 
 -user should be able to add a bookmark
 -user should be able to edit a bookmark
