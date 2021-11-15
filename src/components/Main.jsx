@@ -39,7 +39,7 @@ function Main(props) {
         getBookmarks()
     }
 
-    
+
     const deleteBookmarks = async (id) => {
         await fetch(URL + id, {
             method: "delete"

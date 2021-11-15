@@ -43,17 +43,21 @@ function Index(props){
         return (
           <section>
             {form}
+            <div className="listbody">
             {props.bookmarks.map((bookmark) => {
               return (
+                  
                 <div key={bookmark._id} className="bookmark">
 
-                <a href={bookmark.url} alt={bookmark.name}>{bookmark.name}</a>
+                <a href={bookmark.url} alt={bookmark.name} className="bookmarklink">{bookmark.name}</a>
                 <Link to={`/bookmarks/${bookmark._id}`}>
-                  <h1>Edit Bookmark</h1>
+                  <br/><div className="edit">Edit Bookmark</div>
                 </Link>
               </div>
+             
               );
             })}
+             </div>
           </section>
         );
       } else {
