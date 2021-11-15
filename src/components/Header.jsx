@@ -4,7 +4,7 @@ function Header(){
     return (
         <nav className="nav">
             <Link to="/">
-                <div>Bookmark'd</div>
+                <div className="title">Bookmark'd</div>
             </Link>
         </nav>
     )
