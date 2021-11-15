@@ -1,4 +1,6 @@
-
+body {
+  background-color: #6e88a5;
+}
 
 .App {
   width: 500px;
@@ -12,6 +14,11 @@
 nav {
   font-size: x-large;
   text-align: center;
+  
+}
+
+.title {
+  color: #6e88a5;
 }
 
 .bookmarklink {
@@ -20,6 +27,8 @@ nav {
 
 a {
   padding: 5px;
+  color:#003674
+  
 }
 
 .edit {
@@ -34,6 +43,8 @@ form {
 input {
   padding: 5px;
   margin: 2px;
+  font-family: 'Quattrocento Sans', sans-serif;
+
 }
 
 .listbody{
@@ -41,4 +52,52 @@ input {
   margin: 5px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.bookmark {
+  text-align: center;
+  padding: 10px;
+}
+
+
+.button {
+  background-color: #c4d7eb;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+
+.button:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #202124;
+}
+
+
+.input {
+ 
+  border: 2px solid #c4d7eb;
+  border-radius: 2px;
+  height: 20px;
+
+}
+
+#delete{
+  background-color: rgb(214, 123, 141);
+}
+
+h1{
+  color:#003674
 }

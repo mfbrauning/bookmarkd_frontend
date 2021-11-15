@@ -37,28 +37,28 @@ function Show(props){
 
         const form = (
             <form onSubmit={handleSubmit}>
-                <input
+                <input className="input"
                 type="text"
                 value={editForm.name}
                 name="name"
                 placeholder="name"
                 onChange={handleChange}
-                />
-                <input
+                /> 
+                <input className="input"
                 type="text"
                 value={editForm.url}
                 name="url"
                 placeholder="Bookmark URL"
                 onChange={handleChange}
-                />
-                <input type="submit" value="Update Bookmark"/>
+                /> <br/>
+                <input className="button" type="submit" value="Update Bookmark"/>
             </form>
         )
 
         return (<div className="bookmark">
         <h1>{bookmark.name}</h1>
         {form}
-        <button id="delete" onClick={removeBookmarks}>
+        <button className="button" id="delete" onClick={removeBookmarks}>
           Delete Bookmark
         </button> 
       </div>)
