@@ -23,19 +23,19 @@ function Index(props){
     }
 
     const form = <form onSubmit={handleSumbit}>
-        <input
+        <input className="input"
         type="text"
         value={newForm.name}
         name="name"
         placeholder="name"
         onChange={handleChange}/>
-         <input
+         <input className="input"
         type="text"
         value={newForm.url}
         name="url"
         placeholder="Bookmark URL"
         onChange={handleChange}/>
-        <input type="submit" value="Add New Bookmark"/>
+        <input className="button" type="submit" value="Add New Bookmark"/>
     </form>
 
 
@@ -51,7 +51,7 @@ function Index(props){
 
                 <a href={bookmark.url} alt={bookmark.name} className="bookmarklink">{bookmark.name}</a>
                 <Link to={`/bookmarks/${bookmark._id}`}>
-                  <br/><div className="edit">Edit Bookmark</div>
+                  <br/><button className="button">Edit Bookmark</button>
                 </Link>
               </div>
              
